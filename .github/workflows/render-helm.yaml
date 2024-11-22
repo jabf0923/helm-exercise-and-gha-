@@ -22,9 +22,9 @@ jobs:
         echo "Rendering Helm template for 'dev' environment..."
         pwd
         ls
-        # helm template --debug myapp . -f values.yaml -f values-development.yaml
+        helm template --debug myapp ./helm-chart -f ./helm-chart/values.yaml -f ./helm-chart/values-development.yaml
 
     - name: Render Helm Template for Production
       run: |
         echo "Rendering Helm template for 'prod' environment..."
-        # helm template --debug myapp . -f values.yaml -f values-production.yaml
+        helm template --debug myapp ./helm-chart -f ./helm-chart/values.yaml -f ./helm-chart/values-production.yaml
