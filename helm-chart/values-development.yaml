@@ -1,0 +1,13 @@
+replicaCount: 1
+image:
+  repository: docker.io/nginx
+  imagePullPolicy: Always
+  tag: "latest"
+
+service:
+  type: ClusterIP
+  port: 80
+
+labels:
+  app: myapp
+  environment: dev
