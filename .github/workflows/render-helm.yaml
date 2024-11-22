@@ -20,9 +20,11 @@ jobs:
     - name: Render Helm Template for Development
       run: |
         echo "Rendering Helm template for 'dev' environment..."
-        helm template --debug myapp . -f values.yaml -f values-development.yaml
+        pwd
+        ls
+        # helm template --debug myapp . -f values.yaml -f values-development.yaml
 
     - name: Render Helm Template for Production
       run: |
         echo "Rendering Helm template for 'prod' environment..."
-        helm template --debug myapp . -f values.yaml -f values-production.yaml
+        # helm template --debug myapp . -f values.yaml -f values-production.yaml
